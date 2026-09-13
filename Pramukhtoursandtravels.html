@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pramukh Tours and Travels | Luxury Fleet & Tours Across India</title>
+  <meta name="description" content="Your journey, Our priority. Premium Volvo coaches, Force Urbania, and Tempo Travellers for hire across India from Vadodara. Managed by Meet Patel." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Config Customization -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#111215',
+              card: '#181A1F',
+              accent: '#E88024',
+              gold: '#F59E0B',
+              cream: '#FAF9F6',
+              border: 'rgba(245, 158, 11, 0.15)',
+            }
+          },
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #111215;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2a2c33;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #E88024;
+    }
+
+    /* Glow utilities */
+    .gold-glow {
+      box-shadow: 0 0 25px -5px rgba(232, 128, 36, 0.4);
+    }
+    .pulse-glow {
+      animation: pulseGlow 2s infinite;
+    }
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+      }
+      50% {
+        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+      }
+    }
+
+    /* Hide scrollbar for carousel */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-brand-black text-brand-cream font-sans antialiased overflow-x-hidden selection:bg-brand-accent selection:text-white">
+
+  <!-- ================= TOP CONTACT TICKER ================= -->
+  <header class="bg-black/60 border-b border-brand-border text-xs py-2 px-4 sm:px-8 text-gray-400">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span class="inline-flex items-center gap-1.5 text-brand-gold font-medium">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Vadodara, Gujarat &bull; Tours Pan-India
+        </span>
+        <span class="hidden md:inline text-gray-600">|</span>
+        <span class="hidden md:inline">Tagline: <i>"Your journey, Our priority"</i></span>
+      </div>
+      <div class="flex items-center gap-5 ml-auto">
+        <a href="tel:+919313984003" class="hover:text-brand-gold transition-colors flex items-center gap-1.5">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-accent"></i> +91 93139 84003 (Meet Patel)
+        </a>
+        <a href="https://www.instagram.com/pramukhtoursandtravels?stkn=eXhjZmY0NTI5MHpn&utm_source=qr" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition-colors flex items-center gap-1" title="Instagram">
+          <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= STICKY NAVBAR ================= -->
+  <nav class="sticky top-0 z-50 bg-brand-black/90 backdrop-blur-md border-b border-white/10 transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <img src="logo.jpeg" onerror="this.onerror=null; this.src='"C:\Users\ThinkCentre\OneDrive\Documents\Pramukh Tour & Travels Webiste\logo.jpeg"';" alt="Pramukh Tours Logo" class="h-12 w-auto object-contain rounded-full border border-brand-accent/40 group-hover:scale-105 transition-transform" />
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-xl tracking-tight text-white group-hover:text-brand-gold transition-colors leading-tight">
+              PRAMUKH
+            </span>
+            <span class="text-[10px] tracking-widest uppercase font-semibold text-brand-accent">
+              Tours & Travels
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#home" class="text-sm font-medium tracking-wide text-white hover:text-brand-gold transition-colors">Home</a>
+          <a href="#fleet" class="text-sm font-medium tracking-wide text-gray-300 hover:text-brand-gold transition-colors">What We Provide</a>
+          <a href="#packages" class="text-sm font-medium tracking-wide text-gray-300 hover:text-brand-gold transition-colors">Tour Packages</a>
+          <a href="#testimonials" class="text-sm font-medium tracking-wide text-gray-300 hover:text-brand-gold transition-colors">Client Experience</a>
+          <a href="#about" class="text-sm font-medium tracking-wide text-gray-300 hover:text-brand-gold transition-colors">About Us</a>
+        </div>
+
+        <!-- Header CTA Button -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="https://wa.me/qr/DD3VLG2XZD46M1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-amber-600 hover:to-brand-accent text-black font-semibold text-sm px-5 py-2.5 rounded-full shadow-lg hover:shadow-brand-accent/30 hover:scale-105 transition-all">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+            <span>Book on WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-300 hover:text-white focus:outline-none" aria-label="Open navigation menu">
+          <i data-lucide="menu" id="hamburgerIcon" class="w-7 h-7"></i>
+          <i data-lucide="x" id="closeIcon" class="w-7 h-7 hidden"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-brand-black/95 backdrop-blur-xl border-b border-brand-border px-6 py-6 space-y-4 transition-all">
+      <a href="#home" class="mobile-nav-link block text-lg font-medium text-white hover:text-brand-gold">Home</a>
+      <a href="#fleet" class="mobile-nav-link block text-lg font-medium text-gray-300 hover:text-brand-gold">What We Provide</a>
+      <a href="#packages" class="mobile-nav-link block text-lg font-medium text-gray-300 hover:text-brand-gold">Tour Packages</a>
+      <a href="#testimonials" class="mobile-nav-link block text-lg font-medium text-gray-300 hover:text-brand-gold">Client Experience</a>
+      <a href="#about" class="mobile-nav-link block text-lg font-medium text-gray-300 hover:text-brand-gold">About Us</a>
+      <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+        <a href="https://wa.me/qr/DD3VLG2XZD46M1" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-brand-gold text-black font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow-md">
+          <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i> Book on WhatsApp
+        </a>
+        <a href="tel:+919313984003" class="w-full text-center border border-white/20 text-white font-medium py-2.5 rounded-xl flex items-center justify-center gap-2 hover:border-brand-accent">
+          <i data-lucide="phone" class="w-4 h-4 text-brand-accent"></i> Call Meet Patel
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="relative pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden">
+      <!-- Radial ambient background -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-accent/15 rounded-full blur-[140px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-accent/40 bg-brand-accent/10 text-brand-gold text-xs uppercase tracking-widest font-semibold mb-4">
+            <i data-lucide="shield-check" class="w-4 h-4"></i> Premium Chauffeur & Bus Rentals
+          </span>
+          <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
+            Your Journey, <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-amber-400 to-brand-accent font-serif italic">Our priority</span>
+          </h1>
+          <p class="mt-5 text-gray-300 text-base sm:text-lg leading-relaxed font-normal">
+            Strengthen your bonds with safe, luxurious, and memorable road journeys across India. Offering ultra-luxury Volvo coaches, executive Force Urbania, and bespoke tour charters directly from Vadodara.
+          </p>
+
+          <!-- CTAs -->
+          <div class="mt-8 flex flex-wrap justify-center items-center gap-4">
+            <a href="#fleet" class="px-7 py-3.5 rounded-full bg-white text-brand-black hover:bg-brand-cream font-bold text-sm tracking-wide transition transform hover:-translate-y-0.5 shadow-xl">
+              Explore Luxury Fleet
+            </a>
+            <a href="https://wa.me/qr/DD3VLG2XZD46M1" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-full bg-brand-accent hover:bg-amber-600 text-white font-bold text-sm tracking-wide transition transform hover:-translate-y-0.5 shadow-lg shadow-brand-accent/25 flex items-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Booking
+            </a>
+            <a href="tel:+919313984003" class="px-6 py-3.5 rounded-full border border-white/20 hover:border-brand-gold text-white font-medium text-sm tracking-wide transition flex items-center gap-2">
+              <i data-lucide="phone-call" class="w-4 h-4 text-brand-gold"></i> +91 93139 84003
+            </a>
+          </div>
+        </div>
+
+        <!-- Scroll Parallax Dual Vehicle Showcase -->
+        <div class="relative mt-8 sm:mt-12 max-w-5xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            
+            <!-- Force Urbania Entrance Card -->
+            <div id="hero-urbania" class="relative group rounded-3xl overflow-hidden bg-gradient-to-b from-white/10 to-brand-card p-1 border border-white/10 transition-all duration-700 ease-out transform translate-y-6 md:translate-x-0">
+              <div class="relative h-64 sm:h-72 w-full overflow-hidden rounded-[22px] bg-neutral-900">
+                <img src="urbania.png" onerror="this.onerror=null; this.src='"C:\Users\ThinkCentre\OneDrive\Documents\Pramukh Tour & Travels Webiste\urbania.png"';" alt="Force Urbania Luxury Van" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-4 left-5 right-5">
+                  <span class="text-xs uppercase font-bold tracking-widest text-brand-gold">Executive Van</span>
+                  <h3 class="text-xl font-display font-bold text-white">Force Urbania Luxury</h3>
+                  <p class="text-xs text-gray-300 mt-1">Plush captain seats &bull; Ambient light &bull; High roof</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Volvo 9600 sLX Coach Entrance Card -->
+            <div id="hero-volvo" class="relative group rounded-3xl overflow-hidden bg-gradient-to-b from-white/10 to-brand-card p-1 border border-white/10 transition-all duration-700 ease-out transform translate-y-6 md:translate-x-0">
+              <div class="relative h-64 sm:h-72 w-full overflow-hidden rounded-[22px] bg-neutral-900">
+                <img src="volvo-bus.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800&auto=format&fit=crop&q=80';" alt="Volvo 9600 sLX Super Luxury Coach" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-4 left-5 right-5">
+                  <span class="text-xs uppercase font-bold tracking-widest text-brand-gold">Super Luxury Coach</span>
+                  <h3 class="text-xl font-display font-bold text-white">Volvo 9600 sLX Sleeper/Seater</h3>
+                  <p class="text-xs text-gray-300 mt-1">Air suspension &bull; Whisper quiet &bull; Pan-India permitted</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Badges Bar -->
+          <div class="mt-8 grid grid-cols-3 gap-2 sm:gap-4 p-4 rounded-2xl bg-brand-card/70 backdrop-blur-md border border-brand-border text-center">
+            <div class="flex items-center justify-center gap-2">
+              <i data-lucide="crown" class="w-5 h-5 text-brand-gold hidden sm:block"></i>
+              <span class="text-xs sm:text-sm font-semibold tracking-wider text-gray-200">LUXURY FLEET</span>
+            </div>
+            <div class="flex items-center justify-center gap-2 border-x border-white/10">
+              <i data-lucide="user-check" class="w-5 h-5 text-brand-gold hidden sm:block"></i>
+              <span class="text-xs sm:text-sm font-semibold tracking-wider text-gray-200">VERIFIED DRIVERS</span>
+            </div>
+            <div class="flex items-center justify-center gap-2">
+              <i data-lucide="compass" class="w-5 h-5 text-brand-gold hidden sm:block"></i>
+              <span class="text-xs sm:text-sm font-semibold tracking-wider text-gray-200">TOURS PAN-INDIA</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+    <section class="py-20 bg-brand-card relative border-y border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <span class="h-px w-10 bg-brand-accent"></span>
+            <span class="text-brand-gold uppercase tracking-widest text-xs font-bold">Uncompromising Quality</span>
+            <span class="h-px w-10 bg-brand-accent"></span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">Why Travel With Pramukh?</h2>
+          <p class="text-gray-400 text-sm mt-3">From short executive transfers to multi-week cross-country tours, we guarantee unmatched comfort and reliability.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="p-8 rounded-3xl bg-brand-black/60 border border-white/10 hover:border-brand-accent/50 transition-all duration-300 group hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-2xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-gold mb-6 group-hover:bg-brand-accent group-hover:text-black transition-colors">
+              <i data-lucide="sparkles" class="w-7 h-7"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-2">Luxury Fleet</h3>
+            <p class="text-brand-accent font-medium text-xs mb-3 tracking-wide uppercase">Well Maintained & Ultra Comfortable</p>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Every vehicle undergoes rigorous mechanical inspection and deep sanitization prior to every departure. Fitted with plush recliners and air-conditioning.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="p-8 rounded-3xl bg-brand-black/60 border border-white/10 hover:border-brand-accent/50 transition-all duration-300 group hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-2xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-gold mb-6 group-hover:bg-brand-accent group-hover:text-black transition-colors">
+              <i data-lucide="award" class="w-7 h-7"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-2">Professional Drivers</h3>
+            <p class="text-brand-accent font-medium text-xs mb-3 tracking-wide uppercase">Experienced & Well-Trained</p>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Our chauffeurs have years of highway experience across varied Indian terrain, background checks, and polite, hospitality-focused conduct.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="p-8 rounded-3xl bg-brand-black/60 border border-white/10 hover:border-brand-accent/50 transition-all duration-300 group hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-2xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-gold mb-6 group-hover:bg-brand-accent group-hover:text-black transition-colors">
+              <i data-lucide="heart-handshake" class="w-7 h-7"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-2">Customer Satisfaction</h3>
+            <p class="text-brand-accent font-medium text-xs mb-3 tracking-wide uppercase">Your Safety, Our Top Priority</p>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              24/7 dedicated control desk under the personal guidance of Meet Patel ensures real-time vehicle tracking and instant on-road assistance.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= WHAT WE PROVIDE (FLEET SECTION) ================= -->
+    <section id="fleet" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <span class="text-brand-gold uppercase tracking-widest text-xs font-bold">Premium Transportation</span>
+            <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white mt-2">What We Provide</h2>
+            <p class="text-gray-400 text-sm max-w-xl mt-3">From corporate delegates to extended family vacations and marriage functions, explore our luxury coaches and passenger vans.</p>
+          </div>
+          <a href="https://wa.me/qr/DD3VLG2XZD46M1?text=Hi%20Meet%20Patel,%20I%20want%20to%20inquire%20about%20vehicle%20rental." target="_blank" rel="noopener noreferrer" class="self-start md:self-auto inline-flex items-center gap-2 px-6 py-3 rounded-full border border-brand-accent text-brand-gold hover:bg-brand-accent hover:text-black transition font-semibold text-sm">
+            <i data-lucide="calendar" class="w-4 h-4"></i> Inquire Availability
+          </a>
+        </div>
+
+        <!-- Fleet Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Fleet 1: Volvo 9600 -->
+          <div class="bg-brand-card rounded-3xl overflow-hidden border border-white/10 hover:border-brand-accent/60 transition-all flex flex-col">
+            <div class="relative h-56 w-full overflow-hidden bg-neutral-900">
+              <img src="volvo-bus.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800&auto=format&fit=crop&q=80';" alt="Volvo 9600 sLX" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              <span class="absolute top-4 right-4 bg-brand-accent text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Super Luxury</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-display text-xl font-bold text-white">Volvo 9600 sLX Coach</h3>
+                <p class="text-gray-400 text-xs mt-1">Multi-axle ultra-luxury sleeper & seater configuration for long-haul national travels.</p>
+                
+                <div class="mt-4 pt-4 border-t border-white/10 grid grid-cols-2 gap-3 text-xs text-gray-300">
+                  <div class="flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-brand-gold"></i> 40-53 Seats / Berths</div>
+                  <div class="flex items-center gap-2"><i data-lucide="wind" class="w-4 h-4 text-brand-gold"></i> Climate Control AC</div>
+                  <div class="flex items-center gap-2"><i data-lucide="tv" class="w-4 h-4 text-brand-gold"></i> AV Entertainment</div>
+                  <div class="flex items-center gap-2"><i data-lucide="luggage" class="w-4 h-4 text-brand-gold"></i> Huge Underbelly Space</div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-white/10">
+                <a href="https://wa.me/qr/DD3VLG2XZD46M1?text=Hi%20Meet%20Patel,%20I%20am%20interested%20in%20booking%20the%20Volvo%209600%20sLX%20Coach." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-white/10 hover:bg-brand-accent hover:text-black text-white font-semibold text-xs flex items-center justify-center gap-2 transition-colors">
+                  <i data-lucide="message-circle" class="w-4 h-4"></i> Book This Coach
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fleet 2: Force Urbania -->
+          <div class="bg-brand-card rounded-3xl overflow-hidden border border-white/10 hover:border-brand-accent/60 transition-all flex flex-col">
+            <div class="relative h-56 w-full overflow-hidden bg-neutral-900">
+              <img src="1.png" onerror="this.onerror=null; this.src='""C:\Users\ThinkCentre\OneDrive\Documents\Pramukh Tour & Travels Webiste\1.png""';" alt="Force Urbania" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              <span class="absolute top-4 right-4 bg-brand-gold text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Executive Van</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-display text-xl font-bold text-white">Force Urbania Luxury Van</h3>
+                <p class="text-gray-400 text-xs mt-1">Next-gen European styling, individual AC vents, and reclining business-class comfort.</p>
+                
+                <div class="mt-4 pt-4 border-t border-white/10 grid grid-cols-2 gap-3 text-xs text-gray-300">
+                  <div class="flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-brand-gold"></i> 10-17 Seater</div>
+                  <div class="flex items-center gap-2"><i data-lucide="armchair" class="w-4 h-4 text-brand-gold"></i> Reclining Bucket Seats</div>
+                  <div class="flex items-center gap-2"><i data-lucide="zap" class="w-4 h-4 text-brand-gold"></i> USB Quick Charging</div>
+                  <div class="flex items-center gap-2"><i data-lucide="wifi" class="w-4 h-4 text-brand-gold"></i> Ambient Interior</div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-white/10">
+                <a href="https://wa.me/qr/DD3VLG2XZD46M1?text=Hi%20Meet%20Patel,%20I%20am%20interested%20in%20booking%20the%20Force%20Urbania." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-white/10 hover:bg-brand-accent hover:text-black text-white font-semibold text-xs flex items-center justify-center gap-2 transition-colors">
+                  <i data-lucide="message-circle" class="w-4 h-4"></i> Book Force Urbania
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fleet 3: Tempo Traveller -->
+          <div class="bg-brand-card rounded-3xl overflow-hidden border border-white/10 hover:border-brand-accent/60 transition-all flex flex-col">
+            <div class="relative h-56 w-full overflow-hidden bg-neutral-900">
+              <img src="C:\Users\ThinkCentre\OneDrive\Documents\Pramukh Tour & Travels Webiste\2.png" alt="Tempo Traveller" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              <span class="absolute top-4 right-4 bg-gray-800 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Group Trips</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-display text-xl font-bold text-white">Tempo Traveller (AC)</h3>
+                <p class="text-gray-400 text-xs mt-1">The versatile choice for family getaways, marriage parties, and pilgrimage circuits.</p>
+                
+                <div class="mt-4 pt-4 border-t border-white/10 grid grid-cols-2 gap-3 text-xs text-gray-300">
+                  <div class="flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-brand-gold"></i> 12 / 17 / 20 / 26 Seater</div>
+                  <div class="flex items-center gap-2"><i data-lucide="music" class="w-4 h-4 text-brand-gold"></i> Hi-Fi Music System</div>
+                  <div class="flex items-center gap-2"><i data-lucide="wind" class="w-4 h-4 text-brand-gold"></i> Front & Rear AC</div>
+                  <div class="flex items-center gap-2"><i data-lucide="shield" class="w-4 h-4 text-brand-gold"></i> First-Aid & GPS</div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-white/10">
+                <a href="https://wa.me/qr/DD3VLG2XZD46M1?text=Hi%20Meet%20Patel,%20I%20am%20interested%20in%20booking%20the%20Tempo%20Traveller." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-white/10 hover:bg-brand-accent hover:text-black text-white font-semibold text-xs flex items-center justify-center gap-2 transition-colors">
+                  <i data-lucide="message-circle" class="w-4 h-4"></i> Book Tempo Traveller
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fleet 4: Mini Luxury Buses -->
+          <div class="bg-brand-card rounded-3xl overflow-hidden border border-white/10 hover:border-brand-accent/60 transition-all flex flex-col">
+            <div class="relative h-56 w-full overflow-hidden bg-neutral-900">
+              <img src="C:\Users\ThinkCentre\OneDrive\Documents\Pramukh Tour & Travels Webiste\3.png" alt="Mini Luxury Bus" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              <span class="absolute top-4 right-4 bg-gray-800 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mid-Size Luxury</span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-display text-xl font-bold text-white">SML / Eicher Mini Coaches</h3>
+                <p class="text-gray-400 text-xs mt-1">Maneuverable coaches crafted for hill stations, temple tours, and corporate outings.</p>
+                
+                <div class="mt-4 pt-4 border-t border-white/10 grid grid-cols-2 gap-3 text-xs text-gray-300">
+                  <div class="flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-brand-gold"></i> 28 to 36 Seater</div>
+                  <div class="flex items-center gap-2"><i data-lucide="maximize-2" class="w-4 h-4 text-brand-gold"></i> 2x2 Push Back Seats</div>
+                  <div class="flex items-center gap-2"><i data-lucide="wind" class="w-4 h-4 text-brand-gold"></i> Chilled AC Cabin</div>
+                  <div class="flex items-center gap-2"><i data-lucide="briefcase" class="w-4 h-4 text-brand-gold"></i> Overhead Hat-racks</div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-white/10">
+                <a href="https://wa.me/qr/DD3VLG2XZD46M1?text=Hi%20Meet%20Patel,%20I%20am%20interested%20in%20booking%20a%20Mini%20Luxury%20Bus." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-white/10 hover:bg-brand-accent hover:text-black text-white font-semibold text-xs flex items-center justify-center gap-2 transition-colors">
+                  <i data-lucide="message-circle" class="w-4 h-4"></i> Book Mini Coach
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fleet 5: Customized Tour Packages Card -->
+          <div class="bg-gradient-to-br from-brand-card via-brand-card to-amber-950/40 rounded-3xl p-8 border border-brand-accent/40 flex flex-col justify-between md:col-span-2">
+            <div>
+              <span class="inline-flex items-center gap-1.5 text-xs uppercase font-bold tracking-widest text-brand-gold">
+                <i data-lucide="compass" class="w-4 h-4"></i> End-To-End Hospitality
+              </span>
+              <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-2">Customized Pan-India Tour Packages</h3>
+              <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+                Need a tailored multi-city itinerary for your family vacation, destination wedding, or corporate offsite? We handle route planning, toll/interstate permits, skilled drivers, and 24/7 dedicated assistance so you enjoy the ride hassle-free.
+              </p>
+
+              <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                <div class="p-3 bg-black/40 rounded-xl border border-white/5">
+                  <div class="font-display text-xl font-bold text-brand-gold">100%</div>
+                  <div class="text-[11px] text-gray-400">Tailored Routes</div>
+                </div>
+                <div class="p-3 bg-black/40 rounded-xl border border-white/5">
+                  <div class="font-display text-xl font-bold text-brand-gold">All India</div>
+                  <div class="text-[11px] text-gray-400">Permit Vehicles</div>
+                </div>
+                <div class="p-3 bg-black/40 rounded-xl border border-white/5">
+                  <div class="font-display text-xl font-bold text-brand-gold">Transparent</div>
+                  <div class="text-[11px] text-gray-400">No Hidden Fees</div>
+                </div>
+                <div class="p-3 bg-black/40 rounded-xl border border-white/5">
+                  <div class="font-display text-xl font-bold text-brand-gold">Meet Patel</div>
+                  <div class="text-[11px] text-gray-400">Direct Support</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-4 items-center">
+              <a href="https://wa.me/qr/DD3VLG2XZD46M1?text=Hi%20Meet%20Patel,%20I%20want%20to%20plan%20a%20Custom%20Tour%20Package." target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-brand-gold text-black font-bold text-sm hover:bg-amber-400 transition flex items-center gap-2">
+                <i data-lucide="send" class="w-4 h-4"></i> Discuss Tour Plan on WhatsApp
+              </a>
+              <span class="text-xs text-gray-400">Tours Across India &bull; We Take You Everywhere!</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 10 DESTINATIONS GRID ================= -->
+    <section id="packages" class="py-24 bg-brand-card/50 border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-brand-gold uppercase tracking-widest text-xs font-bold">Incredible India</span>
+          <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white mt-2">Featured Tour Destinations</h2>
+          <p class="text-gray-400 text-sm mt-3">Curated 10 popular destinations booked regularly with our luxury coaches & travellers.</p>
+        </div>
+
+        <!-- 10 Vertical Rectangular Cards Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
+          
+          <!-- Destination 1: Goa -->
+          <div class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer bg-neutral-900 border border-white/10 hover:border-brand-gold transition-all duration-300">
+            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600&auto=format&fit=crop&q=80" alt="Goa Beaches" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 p-4 flex flex-col justify-end">
+              <span class="text-[10px] uppercase font-bold text-brand-gold tracking-widest">Sun & Beaches</span>
+              <h4 class="font-display text-lg font-bold text-white leading-tight">Goa Holiday</h4>
+              <p class="text-xs text-gray-300 opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity mt-1">Beaches, nightlife & heritage churches.</p>
+              <a href="https://wa.me/qr/DD3VLG2XZD46M1?text=Hi%20Meet%20Patel,%20inquiry%20for%20Goa%20Tour." target="_blank" rel="noopener noreferrer" class="mt-2 text-[11px] font-semibold text-brand-gold flex items-center gap-1 group-hover:underline">
+                Inquire Now <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Destination 2: Kashmir -->
+          <div class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer bg-neutral-900 border border-white/10 hover:border-brand-gold transition-all duration-300">
+            <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=600&auto=format&fit=crop&q=80" alt="Kashmir Valley" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 p-4 flex flex-col justify-end">
+              <span class="text-[10px] uppercase font-bold text-brand-gold tracking-widest">Paradise on Earth</span>
+              <h4 class="font-display text-lg font-bold text-white leading-tight">Kashmir Valley</h4>
+              <p class="text-xs text-gray-300 opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity mt-1">Srinagar, Gulmarg & Pahalgam.</p>
+              <a href="https://wa.me/qr/DD3VLG2XZD46M1?text=Hi%20Meet%20Patel,%20inquiry%20for%20Kashmir%20Tour." target="_blank" rel="noopener noreferrer" class="mt-2 text-[11px] font-semibold text-brand-gold flex items-center gap-1 group-hover:underline">
+                Inquire Now <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Destination 3: Rajasthan -->
+          <div class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer bg-neutral-900 border border-white/10 hover:border-brand-gold transition-all duration-300">
+            <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=600&auto=format&fit=crop&q=80" alt="Rajasthan Forts" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 p-4 flex flex-col justify-end">
+              <span class="text-[10px] uppercase font-bold text-brand-gold tracking-widest">Royal Heritage</span>
+              <h4 class="font-display text-lg font-bold text-white leading-tight">Rajasthan Royal</h4>
+              <p class="text-xs text-gray-300 opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity mt-1">Jaipur, Udaipur & Jaisalmer dunes.</p>
+              <a href="https://wa.me/qr/DD3VLG2XZD46M1?text=Hi%20Meet%20Patel,%20inquiry%20for%20Rajasthan%20Tour." target="_blank" rel="noopener noreferrer" class="mt-2 text-[11px] font-semibold text-brand-gold flex items-center gap-1 group-hover:underline">
+                Inquire Now <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Destination 4: Kerala -->
+          <div class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer bg-neutral-900 border border-white/10 hover:border-brand-gold transition-all duration-300">
+            <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&auto=format&fit=crop&q=80" alt="Kerala Backwaters" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 p-4 flex flex-col justify-end">
+              <span class="text-[10px] uppercase font-bold text-brand-gold tracking-widest">God's Own Country</span>
+              <h4 class="font-display text-lg font-bold text-white leading-tight">Kerala Backwaters</h4>
+              <p class="text-xs text-gray-300 opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity mt-1">Munnar tea hills & Alleppey houseboats.</p>
+              <a href="https://wa.me/qr/DD3VLG2XZD46M1?text=Hi%20Meet%20Patel,%20inquiry%20for%20Kerala%20Tour." target="_blank" rel="noopener noreferrer" class="mt-2 text-[11px] font-semibold text-brand-gold flex items-center gap-1 group-hover:underline">
+                Inquire Now <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Destination 5: Manali -->
+          <div class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer bg-neutral-900 border border-white/10 hover:border-brand-gold transition-all duration-300">
+            <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600&auto=format&fit=crop&q=80" alt="Manali Himachal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 p-4 flex flex-col justify-end">
+              <span class="text-[10px] uppercase font-bold text-brand-gold tracking-widest">Snow & Peaks</span>
+              <h4 class="font-display text-lg font-bold text-white leading-tight">Shimla & Manali</h4>
+              <p class="text-xs text-gray-300 opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity mt-1">Atal Tunnel, Solang valley adventures.</p>
+              <a href="https://wa.me/qr/DD3VLG2XZD46M1?text=Hi%20Meet%20Patel,%20inquiry%20for%20Manali%20Tour." target="_blank" rel="noopener noreferrer" class="mt-2 text-[11px] font-semibold text-brand-gold flex items-center gap-1 group-hover:underline">
+                Inquire Now <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Destination 6: Somnath & Dwarka -->
+          <div class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer bg-neutral-900 border border-white/10 hover:border-brand-gold transition-all duration-300">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&auto=format&fit=crop&q=80" alt="Somnath Temple" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 p-4 flex flex-col justify-end">
+              <span class="text-[10px] uppercase font-bold text-brand-gold tracking-widest">Pilgrimage</span>
+              <h4 class="font-display text-lg font-bold text-white leading-tight">Somnath & Dwarka</h4>
+              <p class="text-xs text-gray-300 opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity mt-1">Sacred Jyotirlinga & Dwarkadhish temple.</p>
+              <a href="https://wa.me/qr/DD3VLG2XZD46M1?text=Hi%20Meet%20Patel,%20inquiry%20for%20Somnath%20Dwarka%20Tour." target="_blank" rel="noopener noreferrer" class="mt-2 text-[11px] font-semibold text-brand-gold flex items-center gap-1 group-hover:underline">
+                Inquire Now <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Destination 7: Statue of Unity -->
+          <div class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer bg-neutral-900 border border-white/10 hover:border-brand-gold transition-all duration-300">
+            <img src="C:\Users\ThinkCentre\OneDrive\Documents\Pramukh Tour & Travels Webiste\sou.jpg" alt="Statue of Unity" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 p-4 flex flex-col justify-end">
+              <span class="text-[10px] uppercase font-bold text-brand-gold tracking-widest">World's Tallest</span>
+              <h4 class="font-display text-lg font-bold text-white leading-tight">Statue of Unity</h4>
+              <p class="text-xs text-gray-300 opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity mt-1">Kevadia, laser show & river cruise.</p>
+              <a href="https://wa.me/qr/DD3VLG2XZD46M1?text=Hi%20Meet%20Patel,%20inquiry%20for%20Statue%20of%20Unity%20Tour." target="_blank" rel="noopener noreferrer" class="mt-2 text-[11px] font-semibold text-brand-gold flex items-center gap-1 group-hover:underline">
+                Inquire Now <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Destination 8: Rishikesh & Haridwar -->
+          <div class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer bg-neutral-900 border border-white/10 hover:border-brand-gold transition-all duration-300">
+            <img src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=600&auto=format&fit=crop&q=80" alt="Rishikesh Ganga" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 p-4 flex flex-col justify-end">
+              <span class="text-[10px] uppercase font-bold text-brand-gold tracking-widest">Yoga & Ganges</span>
+              <h4 class="font-display text-lg font-bold text-white leading-tight">Rishikesh & Haridwar</h4>
+              <p class="text-xs text-gray-300 opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity mt-1">Ganga Aarti & Himalayan foothills.</p>
+              <a href="https://wa.me/qr/DD3VLG2XZD46M1?text=Hi%20Meet%20Patel,%20inquiry%20for%20Rishikesh%20Tour." target="_blank" rel="noopener noreferrer" class="mt-2 text-[11px] font-semibold text-brand-gold flex items-center gap-1 group-hover:underline">
+                Inquire Now <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Destination 9: Agra & Golden Triangle -->
+          <div class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer bg-neutral-900 border border-white/10 hover:border-brand-gold transition-all duration-300">
+            <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600&auto=format&fit=crop&q=80" alt="Taj Mahal Agra" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 p-4 flex flex-col justify-end">
+              <span class="text-[10px] uppercase font-bold text-brand-gold tracking-widest">Wonder of World</span>
+              <h4 class="font-display text-lg font-bold text-white leading-tight">Agra & Delhi</h4>
+              <p class="text-xs text-gray-300 opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity mt-1">Taj Mahal, Agra Fort & Mathura.</p>
+              <a href="https://wa.me/qr/DD3VLG2XZD46M1?text=Hi%20Meet%20Patel,%20inquiry%20for%20Agra%20Tour." target="_blank" rel="noopener noreferrer" class="mt-2 text-[11px] font-semibold text-brand-gold flex items-center gap-1 group-hover:underline">
+                Inquire Now <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Destination 10: Leh Ladakh -->
+          <div class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer bg-neutral-900 border border-white/10 hover:border-brand-gold transition-all duration-300">
+            <img src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?w=600&auto=format&fit=crop&q=80" alt="Leh Ladakh" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 p-4 flex flex-col justify-end">
+              <span class="text-[10px] uppercase font-bold text-brand-gold tracking-widest">High Passes</span>
+              <h4 class="font-display text-lg font-bold text-white leading-tight">Leh Ladakh</h4>
+              <p class="text-xs text-gray-300 opacity-90 sm:opacity-0 group-hover:opacity-100 transition-opacity mt-1">Pangong Lake & Khardung La pass.</p>
+              <a href="https://wa.me/qr/DD3VLG2XZD46M1?text=Hi%20Meet%20Patel,%20inquiry%20for%20Ladakh%20Tour." target="_blank" rel="noopener noreferrer" class="mt-2 text-[11px] font-semibold text-brand-gold flex items-center gap-1 group-hover:underline">
+                Inquire Now <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CLIENT'S EXPERIENCE (TESTIMONIALS) ================= -->
+    <section id="testimonials" class="py-24 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-brand-gold uppercase tracking-widest text-xs font-bold">Real Stories</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-2">Client Experience & Reviews</h2>
+          <p class="text-gray-400 text-sm mt-3">Read what travelers from Vadodara and across Gujarat say about our vehicles and service.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Testimonial 1 -->
+          <div class="bg-brand-card p-8 rounded-3xl border border-white/10 relative flex flex-col justify-between">
+            <div>
+              <div class="flex items-center text-brand-gold gap-1 mb-4">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-gray-300 text-sm italic leading-relaxed">
+                "We booked the Volvo 9600 for our 45-member family tour from Vadodara to Rajasthan. The coach was brand new, extremely smooth, and the driver kept time strictly. Meet Patel personally checked on us every day!"
+              </p>
+            </div>
+            <div class="mt-6 pt-6 border-t border-white/10 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center font-bold text-brand-gold">
+                KP
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Kalpesh Patel</h4>
+                <p class="text-xs text-gray-400">Vadodara &bull; Udaipur Tour</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-brand-card p-8 rounded-3xl border border-white/10 relative flex flex-col justify-between">
+            <div>
+              <div class="flex items-center text-brand-gold gap-1 mb-4">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-gray-300 text-sm italic leading-relaxed">
+                "The Force Urbania is by far the most comfortable executive ride I have hired. Our senior management traveled to Mumbai airport seamlessly. Reclining captain seats made the long drive effortless."
+              </p>
+            </div>
+            <div class="mt-6 pt-6 border-t border-white/10 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center font-bold text-brand-gold">
+                DS
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Dr. Snehal Shah</h4>
+                <p class="text-xs text-gray-400">Corporate Charter &bull; Mumbai</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-brand-card p-8 rounded-3xl border border-white/10 relative flex flex-col justify-between">
+            <div>
+              <div class="flex items-center text-brand-gold gap-1 mb-4">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-gray-300 text-sm italic leading-relaxed">
+                "Cleanest Tempo Traveller we have ever traveled in. The driver was calm, knew every turn on the road to Statue of Unity, and accommodated our elderly parents patiently. 10/10 recommendation!"
+              </p>
+            </div>
+            <div class="mt-6 pt-6 border-t border-white/10 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center font-bold text-brand-gold">
+                RJ
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Ruchit Joshi</h4>
+                <p class="text-xs text-gray-400">Family Trip &bull; Statue of Unity</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= ABOUT US ================= -->
+    <section id="about" class="py-24 bg-brand-card/70 border-t border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="text-brand-gold uppercase tracking-widest text-xs font-bold">About Pramukh Tours and Travels</span>
+            <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white mt-2 leading-tight">
+              Crafting Safe, Luxurious & Reliable Journeys
+            </h2>
+            <p class="mt-6 text-gray-300 text-base leading-relaxed">
+              Founded in Vadodara, Gujarat, <strong>Pramukh Tours and Travels</strong> has grown into a trusted travel partner for families, corporate houses, and pilgrim groups across India. Our foundational principle is simple: treat every journey as our utmost priority.
+            </p>
+            <p class="mt-4 text-gray-400 text-sm leading-relaxed">
+              Under the direct leadership of <strong>Meet Patel</strong>, our operations team ensures that each coach and executive van meets stringent benchmarks of mechanical fitness, interior cleanliness, and on-time adherence.
+            </p>
+
+            <div class="mt-8 grid grid-cols-2 gap-4">
+              <div class="flex items-start gap-3">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-gold mt-1 shrink-0"></i>
+                <div>
+                  <h4 class="font-bold text-white text-sm">24/7 Road Support</h4>
+                  <p class="text-xs text-gray-400">Round-the-clock desk for hassle-free travel.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-gold mt-1 shrink-0"></i>
+                <div>
+                  <h4 class="font-bold text-white text-sm">Pan-India Permits</h4>
+                  <p class="text-xs text-gray-400">Hassle-free interstate tax & border clearances.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 flex items-center gap-4">
+              <a href="https://wa.me/qr/DD3VLG2XZD46M1" target="_blank" rel="noopener noreferrer" class="px-7 py-3 rounded-full bg-brand-accent hover:bg-amber-600 text-white font-bold text-sm tracking-wide transition shadow-lg shadow-brand-accent/25">
+                Contact Meet Patel
+              </a>
+              <a href="tel:+919313984003" class="text-sm font-semibold text-brand-gold hover:underline flex items-center gap-1.5">
+                <i data-lucide="phone" class="w-4 h-4"></i> +91 93139 84003
+              </a>
+            </div>
+          </div>
+
+          <!-- Owner / Brand Showcase Card -->
+          <div class="bg-brand-black p-8 rounded-3xl border border-brand-border relative">
+            <div class="absolute -top-3 -right-3 bg-brand-gold text-black text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+              Vadodara HQ
+            </div>
+
+            <div class="flex items-center gap-4 mb-6">
+              <img src="meet.jpeg" onerror="this.onerror=null; this.src='"C:\Users\ThinkCentre\OneDrive\Documents\Pramukh Tour & Travels Webiste\meet.jpeg"';" alt="Pramukh Tours" class="w-16 h-16 rounded-full border border-brand-accent p-1" />
+              <div>
+                <h3 class="font-display text-2xl font-bold text-white">Meet Patel</h3>
+                <p class="text-brand-accent text-sm font-medium">Founder & Managing Director</p>
+                <p class="text-gray-400 text-xs mt-0.5">Pramukh Tours and Travels &bull; Vadodara</p>
+              </div>
+            </div>
+
+            <div class="space-y-3 text-xs text-gray-300 border-t border-white/10 pt-4">
+              <div class="flex items-center justify-between py-1 border-b border-white/5">
+                <span class="text-gray-400">Head Office</span>
+                <span class="font-semibold text-white">Vadodara, Gujarat, India</span>
+              </div>
+              <div class="flex items-center justify-between py-1 border-b border-white/5">
+                <span class="text-gray-400">Phone Hotline</span>
+                <span class="font-semibold text-brand-gold">+91 93139 84003</span>
+              </div>
+              <div class="flex items-center justify-between py-1 border-b border-white/5">
+                <span class="text-gray-400">Coverage</span>
+                <span class="font-semibold text-white">All India Tourist Permits</span>
+              </div>
+              <div class="flex items-center justify-between py-1">
+                <span class="text-gray-400">Email</span>
+                <span class="font-semibold text-white">Pramukhtoursandtravels@gmail.com</span>
+              </div>
+            </div>
+
+            <!-- Booking Quick Bar -->
+            <div class="mt-6 p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-brand-accent/30 text-center">
+              <p class="text-xs text-brand-cream font-medium">Ready to reserve a bus or luxury van for your date?</p>
+              <a href="https://wa.me/qr/DD3VLG2XZD46M1" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center gap-2 text-xs font-bold text-brand-gold hover:underline">
+                Message Directly on WhatsApp <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+  <a href="https://wa.me/qr/DD3VLG2XZD46M1" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba59] text-white p-4 rounded-full shadow-2xl pulse-glow transition transform hover:scale-110 flex items-center justify-center group" aria-label="Chat on WhatsApp with Meet Patel">
+    <i data-lucide="message-circle" class="w-7 h-7 fill-white stroke-none"></i>
+    <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out px-0 group-hover:px-2 font-semibold text-sm">
+      Chat With Us
+    </span>
+  </a>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-black border-t border-white/10 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Col 1: Brand Info -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="logo.jpeg" onerror="this.onerror=null; this.src='"C:\Users\ThinkCentre\OneDrive\Documents\Pramukh Tour & Travels Webiste\logo.jpeg"';" alt="Pramukh Tours" class="h-10 w-auto rounded-full border border-brand-accent/40" />
+            <span class="font-display font-bold text-lg text-white">Pramukh Tours & Travels</span>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Pramukh Tours and Travels Vadodara delivers unmatched road travel experiences across India with premier coaches and trained chauffeurs.
+          </p>
+          <p class="text-xs text-brand-gold italic mt-3 font-serif">
+            "Your journey, Our priority"
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="font-display text-sm font-bold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-xs text-gray-400">
+            <li><a href="#home" class="hover:text-brand-gold transition-colors">Home</a></li>
+            <li><a href="#fleet" class="hover:text-brand-gold transition-colors">What We Provide (Fleet)</a></li>
+            <li><a href="#packages" class="hover:text-brand-gold transition-colors">Featured Tour Packages</a></li>
+            <li><a href="#testimonials" class="hover:text-brand-gold transition-colors">Client's Experience</a></li>
+            <li><a href="#about" class="hover:text-brand-gold transition-colors">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Details -->
+        <div>
+          <h4 class="font-display text-sm font-bold text-white uppercase tracking-wider mb-4">Contact Info</h4>
+          <ul class="space-y-2.5 text-xs text-gray-400">
+            <li class="flex items-start gap-2">
+              <i data-lucide="user" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+              <span>Meet Patel (Founder)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+              <a href="tel:+919313984003" class="hover:text-white transition">+91 93139 84003</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+              <span>Vadodara, Gujarat &bull; Tours Across India</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+              <span>Pramukhtoursandtravels@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Social Handles -->
+        <div>
+          <h4 class="font-display text-sm font-bold text-white uppercase tracking-wider mb-4">Connect With Us</h4>
+          <p class="text-xs text-gray-400 mb-4">Follow our official Instagram for daily travel updates, videos, and passenger photos.</p>
+          <div class="flex items-center gap-3">
+            <a href="https://www.instagram.com/pramukhtoursandtravels?stkn=eXhjZmY0NTI5MHpn&utm_source=qr" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 hover:bg-gradient-to-tr hover:from-yellow-500 hover:via-pink-500 hover:to-purple-500 text-white flex items-center justify-center transition-all shadow-md" aria-label="Instagram">
+              <i data-lucide="instagram" class="w-5 h-5"></i>
+            </a>
+            <a href="https://wa.me/qr/DD3VLG2XZD46M1" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#25D366] text-white flex items-center justify-center transition-all shadow-md" aria-label="WhatsApp">
+              <i data-lucide="message-circle" class="w-5 h-5"></i>
+            </a>
+            <a href="tel:+919313984003" class="w-10 h-10 rounded-full bg-white/10 hover:bg-brand-accent text-white flex items-center justify-center transition-all shadow-md" aria-label="Phone">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+        <p>&copy; <span id="year"></span> Pramukh Tours and Travels. All rights reserved.</p>
+        <p>Managed by Meet Patel &bull; Tours Across India - We Take You Everywhere!</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Auto-update Copyright Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile Hamburger Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    });
+
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+
+    // Dual Vehicle Scroll Parallax Interaction in Hero
+    const urbaniaHero = document.getElementById('hero-urbania');
+    const volvoHero = document.getElementById('hero-volvo');
+
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY;
+      if (window.innerWidth >= 768 && scrollPos < 700) {
+        // Subtle dynamic slide-in & depth transition
+        urbaniaHero.style.transform = `translateX(${Math.min(0, -30 + scrollPos * 0.1)}px) scale(${1 + scrollPos * 0.00015})`;
+        volvoHero.style.transform = `translateX(${Math.max(0, 30 - scrollPos * 0.1)}px) scale(${1 + scrollPos * 0.00015})`;
+      }
+    }, { passive: true });
+  </script>
+</body>
+</html>
